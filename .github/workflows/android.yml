@@ -34,6 +34,11 @@ jobs:
         tar -xf cmake-3.10.2-Linux-x86_64.tar.gz
         export PATH=$(pwd)/cmake-3.10.2-Linux-x86_64/bin:$PATH
 
+    - name: Install required packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lib32z1 lib32ncurses5
+
     - name: Cache android extra
       uses: actions/cache@v2
       with:
