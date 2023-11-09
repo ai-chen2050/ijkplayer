@@ -27,7 +27,12 @@ jobs:
     - name: Setup ndk
       run: |
         yes 2>/dev/null | sudo $ANDROID_HOME/tools/bin/sdkmanager --install "ndk;16.1.4479499" "cmake;3.10.2.4988404"
-
+    
+    - name: Install CMake 3.10.2
+      run: |
+        wget -q https://cmake.org/files/v3.10/cmake-3.10.2-Linux-x86_64.tar.gz
+        tar -xf cmake-3.10.2-Linux-x86_64.tar.gz
+        export PATH=$(pwd)/cmake-3.10.2-Linux-x86_64/bin:$PATH
 
     - name: Cache android extra
       uses: actions/cache@v2
