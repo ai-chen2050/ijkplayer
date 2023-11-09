@@ -52,3 +52,5 @@ pull_fork "x86_64"
 
 cp extra/CMakeLists.txt.yuv ijkmedia/ijkyuv/CMakeLists.txt
 cp extra/CMakeLists.txt.soundtouch ijkmedia/ijksoundtouch/CMakeLists.txt
+
+echo "end"
