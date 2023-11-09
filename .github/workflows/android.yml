@@ -37,7 +37,7 @@ jobs:
     - name: Install required packages
       run: |
         sudo apt-get update
-        sudo apt-get install -y lib32z1 lib32ncurses5
+        sudo apt-get install -y lib32z1
 
     - name: Cache android extra
       uses: actions/cache@v2
